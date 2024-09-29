@@ -33,7 +33,7 @@ public class MyArrays {
     System.out.println("Testing returnCopy");
     int[] testArray = new int[]{1,2,3,4};
     System.out.println("expected value: "+ aryToString(testArray) + "returned value: "+ aryToString(returnCopy(testArray)));
-    if (aryToString(testArray)==aryToString(returnCopy(testArray))){
+    if (aryToString(testArray).equals(aryToString(returnCopy(testArray)))){
       System.out.println("contents equal");
     }
     if(testArray == returnCopy(testArray)){
@@ -41,7 +41,7 @@ public class MyArrays {
     }
     int[] testArray1 = new int[]{5,2,10,13};
     System.out.println("expected value: "+ aryToString(testArray1) + "returned value: "+ aryToString(returnCopy(testArray1)));
-    if (aryToString(testArray1)==aryToString(returnCopy(testArray1))){
+    if (aryToString(testArray1).equals(aryToString(returnCopy(testArray1)))){
       System.out.println("contents equal");
     }
     if(testArray1 == returnCopy(testArray1)){
@@ -50,12 +50,12 @@ public class MyArrays {
     System.out.println("Testing concatArray");
     int[] Arraycat = new int[]{1,2,3,4,5,2,10,13};
     System.out.println("expected value: "+ aryToString(Arraycat) + "returned value: "+ aryToString(concatArray(testArray,testArray1)));
-    if (aryToString(Arraycat)==aryToString(concatArray(testArray,testArray1))){
+    if (aryToString(Arraycat).equals(aryToString(concatArray(testArray,testArray1)))){
       System.out.println("contents equal");
     }
     int[] Arraycat1 = new int[]{5,2,10,13,1,2,3,4};
     System.out.println("expected value: "+ aryToString(Arraycat1) + "returned value: "+ aryToString(concatArray(testArray1,testArray)));
-    if (aryToString(Arraycat1)==aryToString(concatArray(testArray1, testArray))){
+    if (aryToString(Arraycat1).equals(aryToString(concatArray(testArray1, testArray)))){
       System.out.println("contents equal");
     }
   }
