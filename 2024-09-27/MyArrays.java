@@ -59,7 +59,4 @@ public class MyArrays {
       System.out.println("contents equal");
     }
   }
-
-
-
 }
