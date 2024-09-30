@@ -23,12 +23,13 @@ public class ArrayMethods{
   public static int arr2DSum(int[][] nums){
     int sum = 0;
     for (int idx = 0; idx < nums.length; idx++){
-      for(int idx1 = 0; idx < nums[idx].length; idx1++){
+      for(int idx1 = 0; idx1 < nums[idx].length; idx1++){
         sum += nums[idx][idx1];
       }
     }
     return sum;
   }
+
   public static void main(String[] args){
     //testing first function
     int[][] testArr = new int[][] {{1,2,3},{0,0,0},{1,1,1,1,1}};
