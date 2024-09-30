@@ -32,7 +32,7 @@ public class ArrayMethods{
   public static int[][] swapRC(int[][] nums){
     int[][] newArr = new int[nums[0].length][nums.length];
     for (int idx = 0; idx < nums.length; idx++){
-      for(int idx1 = 0; idx < nums[idx].length; idx++){
+      for(int idx1 = 0; idx1 < nums[idx].length; idx1++){
         newArr[idx1][idx] = nums[idx][idx1];
       }
     }
@@ -51,7 +51,7 @@ public class ArrayMethods{
     System.out.println("Expected = " + 40 + " Result = " +arr2DSum(testArr3));
     //function 3
     int[][] testArr4 = new int[][] {{1,2,3},{4,5,6}};
-    System.out.println("Expected = " + "[[1,4], [2,5], [3,6]]" + " Result = " +arrToString(swapRC(testArr4)));
+    System.out.println("Expected = " + "[[1, 4], [2, 5], [3, 6]]" + " Result = " +arrToString(swapRC(testArr4)));
     int[][] testArr5 = new int[][] {{1,2},{3,4},{5,6},{7,8}};
     System.out.println("Expected = " + "[[1, 3, 5, 7], [2, 4, 6, 8]]" + " Result = " +arrToString(swapRC(testArr5)));
   }
