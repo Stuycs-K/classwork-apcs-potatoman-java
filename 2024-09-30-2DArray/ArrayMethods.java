@@ -18,13 +18,27 @@ public class ArrayMethods{
         str += ", ";
       }
     }
-    return (str + "]")
+    return (str + "]");
+  }
+  public static int arr2DSum(int[][] nums){
+    int sum = 0;
+    for (int idx = 0; idx < nums.length; idx++){
+      for(int idx1 = 0; idx < nums[idx].length; idx1++){
+        sum += nums[idx][idx1];
+      }
+    }
+    return sum;
   }
   public static void main(String[] args){
     //testing first function
-    int[][] testArr= {{1,2,3},{0,0,0},{1,1,1,1,1}};
-    System.out.println("Expected = " + "[[1, 2, 3], [0, 0, 0], [1, 1, 1, 1, 1]]" + "Result = " +arrToString(testArr));
-    int[][] testArr1 = {{4,32,5,2},{1,6},{3,3,2}};
-    System.out.println("Expected = " + "[[4, 32, 5, 2], [1, 6], [3, 3, 2]]" + "Result = " +arrToString(testArr1));
+    int[][] testArr = new int[][] {{1,2,3},{0,0,0},{1,1,1,1,1}};
+    System.out.println("Expected = " + "[[1, 2, 3], [0, 0, 0], [1, 1, 1, 1, 1]]" + " Result = " +arrToString(testArr));
+    int[][] testArr1 = new int[][] {{4,32,5,2},{1,6},{3,3,2}};
+    System.out.println("Expected = " + "[[4, 32, 5, 2], [1, 6], [3, 3, 2]]" + " Result = " +arrToString(testArr1));
+    //testing function 2
+    int[][] testArr2 = new int[][] {{1,2,3},{4,5},{6,7,8,9}};
+    System.out.println("Expected = " + 45 + " Result = " +arr2DSum(testArr2));
+    int[][] testArr3 = new int[][] {{4,4,4,4},{4},{4,4,4,4,4}};
+    System.out.println("Expected = " + 40 + " Result = " +arr2DSum(testArr3));
   }
 }
