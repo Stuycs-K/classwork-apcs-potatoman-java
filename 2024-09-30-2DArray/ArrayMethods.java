@@ -11,6 +11,9 @@ public class ArrayMethods{
     return (str+"]");
   }
   public static void main(String[] args){
-
+    int[][] testArr= {{1,2,3},{0,0,0},{1,1,1,1,1}};
+    System.out.println("Expected = " + "[[1, 2, 3], [0, 0, 0], [1, 1, 1, 1, 1]]" + "Result = " +arrToString(testArr));
+    int[][] testArr1 = {{4,32,5,2},{1,6},{3,3,2}};
+    System.out.println("Expected = " + "")
   }
 }
