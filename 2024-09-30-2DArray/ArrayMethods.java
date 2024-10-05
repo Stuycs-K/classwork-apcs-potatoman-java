@@ -74,6 +74,13 @@ public class ArrayMethods{
     System.out.println("Expected = " + "[[1, 4], [2, 5], [3, 6]]" + " Result = " +arrToString(swapRC(testArr4)));
     int[][] testArr5 = new int[][] {{1,2},{3,4},{5,6},{7,8}};
     System.out.println("Expected = " + "[[1, 3, 5, 7], [2, 4, 6, 8]]" + " Result = " +arrToString(swapRC(testArr5)));
+    //testing repolaceNegative
+    int[][] testArr6 = new int[][] {{-1,3,-1},{4,-2,-1},{8,3,6}};
+    replaceNegative(testArr6);
+    System.out.println("Expected = " + [[1, 3, 0], [4, 1, 0], [8, 3, 6]] + " Result = " +arrToString(testArr6));
+    int[][] testArr7 = new int[][] {{-5,2,1},{1},{},{3,-1,5,-5}};
+    replaceNegative(testArr7);
+    System.out.println("Expected = " + [[1, 2, 1], [1], [], [3, 0, 5, 1]] + " Result = " +arrToString(testArr7));
   }
 
 }
