@@ -77,10 +77,15 @@ public class ArrayMethods{
     //testing repolaceNegative
     int[][] testArr6 = new int[][] {{-1,3,-1},{4,-2,-1},{8,3,6}};
     replaceNegative(testArr6);
-    System.out.println("Expected = " + [[1, 3, 0], [4, 1, 0], [8, 3, 6]] + " Result = " +arrToString(testArr6));
+    System.out.println("Expected = " + "[[1, 3, 0], [4, 1, 0], [8, 3, 6]]" + " Result = " +arrToString(testArr6));
     int[][] testArr7 = new int[][] {{-5,2,1},{1},{},{3,-1,5,-5}};
     replaceNegative(testArr7);
-    System.out.println("Expected = " + [[1, 2, 1], [1], [], [3, 0, 5, 1]] + " Result = " +arrToString(testArr7));
+    System.out.println("Expected = " + "[[1, 2, 1], [1], [], [3, 0, 5, 1]]" + " Result = " +arrToString(testArr7));
+    //testing copy w 2d
+    int[][] testArr8 = new int[][] {{1,2,3},{2},{5,1,2,3,4}};
+    System.out.println("Expected = " + "[[1, 2, 3], [2], [5, 1, 2, 3, 4]]" + " Result = " +arrToString(copy(testArr8)));
+    int[][] testArr9 = new int[][] {{2},{},{1,2,5},{10,5}};
+    System.out.println("EXpected = " + "[[2], [], [1, 2, 5], [10, 5]]" + " Result = " +arrToString(copy(testArr9)));
   }
 
 }
