@@ -52,11 +52,19 @@ public class ArrayMethods{
         }
       }
     }
+    public static int[] copyHelper(int[] nums){
+      int[] copy = new int[nums.length];
+      for (int idx = 0; idx < nums.length; idx ++){
+        copy[idx] =  nums[idx];
+      }
+      return copy;
+    }
     public static int[][] copy(int[][] nums){
       int[][] result = new int[nums.length][];
-    }
-    public static int[][] copyHelper(int[][] nums){
-
+      for (int idx = 0; idx < nums.length; idx++){
+        result[idx] = copyHelper(nums[idx]);
+      }
+      return result;
     }
   public static void main(String[] args){
     //testing first function
