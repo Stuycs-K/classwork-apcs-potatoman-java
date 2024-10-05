@@ -40,7 +40,7 @@ public class ArrayMethods{
   }
   public static void replaceNegative(int[][] vals){
       for (int i = 0; i < vals.length; i++){
-        for (int j = 0; i < vals[i],length; j++){
+        for (int j = 0; j < vals[i],length; j++){
           if (vals[i][j] < 0){
             if (i == j){
               vals[i][j] = 1;
@@ -82,7 +82,7 @@ public class ArrayMethods{
     System.out.println("Expected = " + "[[1, 4], [2, 5], [3, 6]]" + " Result = " +arrToString(swapRC(testArr4)));
     int[][] testArr5 = new int[][] {{1,2},{3,4},{5,6},{7,8}};
     System.out.println("Expected = " + "[[1, 3, 5, 7], [2, 4, 6, 8]]" + " Result = " +arrToString(swapRC(testArr5)));
-    //testing repolaceNegative
+    //testing replaceNegative
     int[][] testArr6 = new int[][] {{-1,3,-1},{4,-2,-1},{8,3,6}};
     replaceNegative(testArr6);
     System.out.println("Expected = " + "[[1, 3, 0], [4, 1, 0], [8, 3, 6]]" + " Result = " +arrToString(testArr6));
@@ -93,7 +93,7 @@ public class ArrayMethods{
     int[][] testArr8 = new int[][] {{1,2,3},{2},{5,1,2,3,4}};
     System.out.println("Expected = " + "[[1, 2, 3], [2], [5, 1, 2, 3, 4]]" + " Result = " +arrToString(copy(testArr8)));
     int[][] testArr9 = new int[][] {{2},{},{1,2,5},{10,5}};
-    System.out.println("EXpected = " + "[[2], [], [1, 2, 5], [10, 5]]" + " Result = " +arrToString(copy(testArr9)));
+    System.out.println("Expected = " + "[[2], [], [1, 2, 5], [10, 5]]" + " Result = " +arrToString(copy(testArr9)));
   }
 
 }
