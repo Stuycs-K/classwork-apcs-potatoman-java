@@ -12,7 +12,7 @@ public class ArrayDemo {
     System.out.println("Expected = "+27+" Result = "+arr2DSum(test1));
     System.out.println("Expected = "+0+" Result = "+ arr2DSum(test2));
     System.out.println("Expected = "+31+" Result = "+ arr2DSum(test3));
-    //testing 
+    //testing
 }
   public static String arrToString(int[] nums){
     String str = "[";
@@ -53,6 +53,19 @@ public class ArrayDemo {
       }
     }
     return sum;
+  }
+  public static void replaceNegative(int[][] vals){
+    for (int i = 0; i < vals.length; i++){
+      for (int j = 0; j < vals[i],length; j++){
+        if (vals[i][j] < 0){            if (i == j){
+              vals[i][j] = 1;
+          }
+          else{
+            vals[i][j] =0;
+          }
+        }
+      }  
+    }
   }
 
 }
