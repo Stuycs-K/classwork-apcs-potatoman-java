@@ -109,5 +109,17 @@ public class ArrayDemo {
     }
     return (newArr);
   }
-
+  public static String htmlTable(int[][] nums){
+    String table = "<table>";
+    String row ="";
+    for (int idx = 0; idx < nums.length; idx++){
+      row = "<tr>";
+      for (int idx1 = 0; idx1 < nums[idx].length; idx1++){
+        row += "<td>"+nums[idx][idx1]+"</td>";
+      }
+      row+="</tr>";
+      table+=row;
+    }
+    return(table+"</table>");
+  }
 }
