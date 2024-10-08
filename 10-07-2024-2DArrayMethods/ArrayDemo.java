@@ -32,6 +32,8 @@ public class ArrayDemo {
     System.out.println("Expected = [[1, 4], [2, 5], [3, 6]] Result = " +Arrays.deepToString(swapRC(test6)));
     int[][] test7 = new int[][] {{1,2},{3,4},{5,6},{7,8}};
     System.out.println("Expected = [[1, 3, 5, 7], [2, 4, 6, 8]] Result = " +Arrays.deepToString(swapRC(test7)));
+    //testing htmlTable
+    System.out.println("Expected = <table><tr><td>0</td><td>1</td><td>4</td></tr><tr><td>0</td><td>14</td><td>0</td></tr><tr></tr><tr><td>1</td><td>5</td><td>2</td></tr></table> Result = "+htmlTable(test1));
   }
   public static String arrToString(int[] nums){
     String str = "[";
