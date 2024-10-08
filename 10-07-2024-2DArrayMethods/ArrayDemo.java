@@ -3,36 +3,36 @@ public class ArrayDemo {
   public static void main(String[]args){
     int[][] test1 = {{0,1,4},{0,14,0},{},{1,5,2}};
     int[][] test2 = {{},{}};
-    int[][] test3 = {{1,4,4},{9,1,5},{1,1,1,1,1,1,1}}
+    int[][] test3 = {{1,4,4},{9,1,5},{1,1,1,1,1,1,1}};
     //testing arrToString
-    System.out.println("Expected = "+Arrays.toString(test1)+" Result = " +arrToString(test1));
-    System.out.println("Expected = "+Arrays.toString(test2)+" Result = " +arrToString(test2));
-    System.out.println("Expected = "+Arrays.toString(test3)+" Result = " +arrToString(test3));
+    System.out.println("Expected = "+Arrays.deepToString(test1)+" Result = " +arrToString(test1));
+    System.out.println("Expected = "+Arrays.deepToString(test2)+" Result = " +arrToString(test2));
+    System.out.println("Expected = "+Arrays.deepToString(test3)+" Result = " +arrToString(test3));
     //testing countZeroes2D
-    System.out.println("Expected = "+3+" Result = "+countZeroes2D(test1));
-    System.out.println("Expected = "+0+" Result = "+countZeroes2D(test2));
-    System.out.println("Expected = "+0+" Result = "+countZeroes2D(test3));
+    System.out.println("Expected = "+3+" Result = "+countZeros2D(test1));
+    System.out.println("Expected = "+0+" Result = "+countZeros2D(test2));
+    System.out.println("Expected = "+0+" Result = "+countZeros2D(test3));
     //testing arr2DSum
     System.out.println("Expected = "+27+" Result = "+arr2DSum(test1));
     System.out.println("Expected = "+0+" Result = "+ arr2DSum(test2));
     System.out.println("Expected = "+31+" Result = "+ arr2DSum(test3));
     //testing replaceNegative
     int[][] test4 = new int[][] {{-1,3,-1},{4,-2,-1},{8,3,6}};
-    replaceNegative(testArr4);
-    System.out.println("Expected = " + "[[1, 3, 0], [4, 1, 0], [8, 3, 6]]" + " Result = " +Arrays.toString(test4));
+    replaceNegative(test4);
+    System.out.println("Expected = " + "[[1, 3, 0], [4, 1, 0], [8, 3, 6]]" + " Result = " +Arrays.deepToString(test4));
     int[][] test5 = new int[][] {{-5,2,1},{1},{},{3,-1,5,-5}};
     replaceNegative(test5);
-    System.out.println("Expected = " + "[[1, 2, 1], [1], [], [3, 0, 5, 1]]" + " Result = " +Arrays.toString(test5));
+    System.out.println("Expected = " + "[[1, 2, 1], [1], [], [3, 0, 5, 1]]" + " Result = " +Arrays.deepToString(test5));
     //testing copy
     System.out.println("Expected = " + "[[0, 1, 4], [0, 14, 0], [], [1, 5, 2]]" + " Result = " +arrToString(copy(test1)));
-    System.out.println("Expected = " + "[[], []]" + " Result = " +Arrays.toString(copy(test2)));
-    System.out.println("Expected = " + "[[1, 4, 4], [9, 1, 5], [1, 1, 1, 1, 1, 1, 1]]" + " Result = " +Arrays.toString(copy(test3)));
+    System.out.println("Expected = " + "[[], []]" + " Result = " +Arrays.deepToString(copy(test2)));
+    System.out.println("Expected = " + "[[1, 4, 4], [9, 1, 5], [1, 1, 1, 1, 1, 1, 1]]" + " Result = " +Arrays.deepToString(copy(test3)));
     //testing swapRC
     int[][] test6 = new int[][] {{1,2,3},{4,5,6}};
-    System.out.println("Expected = [[1, 4], [2, 5], [3, 6]] Result = " +Arrays.toString(swapRC(testArr4)));
+    System.out.println("Expected = [[1, 4], [2, 5], [3, 6]] Result = " +Arrays.deepToString(swapRC(test6)));
     int[][] test7 = new int[][] {{1,2},{3,4},{5,6},{7,8}};
-    System.out.println("Expected = [[1, 3, 5, 7], [2, 4, 6, 8]] Result = " +Arrays.toString(swapRC(testArr5)));
-}
+    System.out.println("Expected = [[1, 3, 5, 7], [2, 4, 6, 8]] Result = " +Arrays.deepToString(swapRC(test7)));
+  }
   public static String arrToString(int[] nums){
     String str = "[";
     for (int idx = 0; idx < nums.length; idx++){
@@ -75,7 +75,7 @@ public class ArrayDemo {
   }
   public static void replaceNegative(int[][] vals){
     for (int i = 0; i < vals.length; i++){
-      for (int j = 0; j < vals[i],length; j++){
+      for (int j = 0; j < vals[i].length; j++){
         if (vals[i][j] < 0){            if (i == j){
               vals[i][j] = 1;
           }
