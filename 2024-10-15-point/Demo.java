@@ -5,7 +5,9 @@ public class Demo{
   to the others.
   */
   public static double distance(Point a, Point b){
-    return 0.0;
+    double dist;
+    dist = Math.sqrt(Math.pow((a.getX()-b.getX()),2)+Math.pow((a.getY()-b.getY()),2));
+    return dist;
   }
 
   public static void main(String[]args){
@@ -17,8 +19,8 @@ public class Demo{
     System.out.println( p3);
     System.out.println( p4);
     System.out.println( p5);
-    /*
     System.out.println( distance(p1,p2));
+    /*
     System.out.println( Point.distance(p1,p2));
     System.out.println( p1.distanceTo(p2));
     */
