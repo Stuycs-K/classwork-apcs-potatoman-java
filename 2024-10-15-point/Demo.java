@@ -15,6 +15,8 @@ public class Demo{
     Point p4 = new Point(p1);
     Point p5 = new Point(p2);
     System.out.println( p3);
+    System.out.println( p4);
+    System.out.println( p5);
     /*
     System.out.println( distance(p1,p2));
     System.out.println( Point.distance(p1,p2));
