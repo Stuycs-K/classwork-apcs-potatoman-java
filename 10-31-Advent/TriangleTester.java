@@ -25,6 +25,16 @@ public class TriangleTester {
       return 0;
     }
   }
+  public static int countTrianglesB(String filename){
+    try{
+      File file = new File(filename);
+      Scanner input = new Scanner(file);
+      int t1s1, t1s2, t1s3, t2s1, t2s2, t2s3, t3s2, t3s3;
+      while(input.hasNext()){
+        t1s1 = 
+      }
+    }
+  }
   public static void main(String[] args){
     System.out.println(countTrianglesA("inputTri.txt"));
   }
