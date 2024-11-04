@@ -6,17 +6,26 @@ public class TriangleTester {
     return !(s1+s2 <= s3 || s1+s3 <= s2 || s2+s3 <= s1);
   }
   public static int countTrianglesA(String filename){
-    File file = new File(inputTri.txt);
-    Scanner input = new Scanner(file);
-    int side1, side2, side3, counter;
-    while(input.hasNextLine()){
-      side1 = input.nextInt();
-      side2 = input.nextInt();
-      side3 = input.nextInt();
-      if(validTriangle(side1, side2, side3){
-        counter++;
+    try{
+      File file = new File(filename);
+      Scanner input = new Scanner(file);
+      int side1, side2, side3, counter;
+      counter = 0;
+      while(input.hasNext()){
+        side1 = input.nextInt();
+        side2 = input.nextInt();
+        side3 = input.nextInt();
+        if(validTriangle(side1, side2, side3)){
+          counter++;
+        }
       }
+      return counter;
+    }catch(FileNotFoundException ex){
+      System.out.println("File not found");
+      return 0;
     }
-    return counter;
+  }
+  public static void main(String[] args){
+    System.out.println(countTrianglesA("inputTri.txt"));
   }
 }

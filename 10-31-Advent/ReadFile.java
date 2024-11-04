@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class ReadFile {
   public static void main(String[] args) {
     try {
-      File file = new File("ReadFile.java");
+      File file = new File("inputTri.txt");
       Scanner input = new Scanner(file);
       boolean skip = false;
       while(input.hasNextLine()){
