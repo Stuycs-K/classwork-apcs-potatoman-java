@@ -29,8 +29,9 @@ public class TriangleTester {
     try{
       File file = new File(filename);
       Scanner input = new Scanner(file);
-      int t1s1, t1s2, t1s3, t2s1, t2s2, t2s3, t3s2, t3s3;
-      while(input.hasNext()){
+      int t1s1, t1s2, t1s3, t2s1, t2s2, t2s3, t3s1, t3s2, t3s3;
+      int counter = 0;
+      while(input.hasNextInt()){
         t1s1 = input.nextInt();
         t2s1 = input.nextInt();
         t3s1 = input.nextInt();
@@ -49,14 +50,14 @@ public class TriangleTester {
         if(validTriangle(t3s1, t3s2, t3s3)){
           counter++;
         }
-        return(counter);
       }
+      return(counter);
     }catch(FileNotFoundException ex){
       System.out.println("File not found");
       return 0;
     }
   }
   public static void main(String[] args){
-    System.out.println(countTrianglesA("inputTri.txt"));
+    System.out.println(countTrianglesB("inputTri.txt"));
   }
 }
