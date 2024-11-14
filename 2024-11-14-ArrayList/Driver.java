@@ -3,11 +3,11 @@ import java.util.ArrayList;
 
 public class Driver{
   public static void main(String[] args){
-    System.out.println(ArrayListPractice.createRandomArray(2));
-    System.out.println(ArrayListPractice.createRandomArray(5));
-    System.out.println(ArrayListPractice.createRandomArray(0));
-    System.out.println(ArrayListPractice.createRandomArray(200000));
-
+    ArrayList<String> Short = new ArrayList<String>();
+    Short = ArrayListPractice.createRandomArray(20);
+    System.out.println(Short);
+    ArrayListPractice.replaceEmpty(Short);
+    System.out.println(Short);
 
   }
 
