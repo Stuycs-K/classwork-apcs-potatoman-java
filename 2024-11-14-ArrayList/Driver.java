@@ -4,7 +4,7 @@ public class Driver{
     ArrayList<String> Short = new ArrayList<String>();
     Short = ArrayListPractice.createRandomArray(20);
     System.out.println(Short);
-    ArrayListPractice.replaceEmpty(Short);
-    System.out.println(Short);
+    //ArrayListPractice.replaceEmpty(Short);
+    System.out.println(ArrayListPractice.makeReversedList(Short));
   }
 }
