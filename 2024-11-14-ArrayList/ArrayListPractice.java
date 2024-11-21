@@ -29,4 +29,26 @@ public class ArrayListPractice{
     }
     return reversed;
   }
+  public static ArrayList<String> mixLists(ArrayList<String> a, ArrayList<String> b){
+    ArrayList<String> mixed = new ArrayList<String>();
+    int index = 0;
+    while(index < Math.min(a.size(),b.size())){
+      mixed.add(a.get(index));
+      mixed.add(b.get(index));
+      index++;
+    }
+    if (index == a.size()){
+      while (index < b.size()){
+        mixed.add(b.get(index));
+        index++;
+      }
+    }
+    else{
+      while(index < a.size()){
+        mixed.add(a.get(index));
+        index++;
+      }
+    }
+    return mixed;
+  }
 }
