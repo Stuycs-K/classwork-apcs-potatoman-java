@@ -46,7 +46,13 @@ public static void color(int m1, int m2, int m3){
 public static void color(int m1, int m2, int m3, int m4){
   System.out.print ("\033["+ m1 + ";" + m2 + ";" + m3 + ";"+m4+"m");
 }
-
+//RGB color commands;
+public static String rgb(int r, int g, int b){
+  return("\033[38;2;"+r+";"+g+";"+b+"m");
+}
+public static String rgbackground(int r, int g, int b){
+    return("\033[48;2;"+r+";"+g+";"+b+"m");
+}
 //And don't forget you can easily delay the printing if needed:
 public static void wait(int millis){
   try {
