@@ -35,7 +35,7 @@ public static void go(int row,int col){
 
 //Overloarded color commands (give 1 or more colors/modifiers)
 public static void color(int m){
-  System.out.print ("\033[;" + m + "m");
+  System.out.print ("\033[" + m + "m");
 }
 public static void color(int m1, int m2){
   System.out.print ("\033["+ m1 + ";" + m2 + "m");
